@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ResourceManagementF.Models.AcompT>
+
+@{
+    ViewBag.Title = "Index";
+}
+<p>
+    @Html.ActionLink("Return Home", "Index", "Home", null,new { @class = "btn btn-default" })
+    @Html.ActionLink("Impriment Affecter", "Index", "AprintTs", null, new { @class = "btn btn-default" })
+</p>
+<h2>Affectation des Ordinateur pour les Enseignant</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-responsive table-striped">
+    <tr>
+        <th>
+            Enseignant Email
+        </th>
+        <th>
+            Ordinateur Brand
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Affecter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Panne)
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profs.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Computers.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Affecter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Panne)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

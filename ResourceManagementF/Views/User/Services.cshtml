@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ResourceManagementF.Models.AcompT>
+
+@{
+    ViewBag.Title = "Services";
+}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Panne Ordinateur", "Services", "User")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<h2>Services</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Enseignant
+        </th>
+        <th>
+            Ordinateur
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Affecter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Panne)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Profs.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Computers.Brand)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Panne)
+    </td>
+    <td>
+        @Html.ActionLink("Panne fixer", "Fixed", new { id = item.Id }, new { @class = "btn btn-primary" })
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ResourceManagementF.Models.Computer>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Computers", "Index", "Computers")</li>
+                <li>@Html.ActionLink("Printers", "Index", "Printers")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<h2>Ordinateur</h2>
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-responsive table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateLivraison)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Warranty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cpu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ram)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Storage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monitor)
+        </th>
+        <th>
+            Provider
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateLivraison)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Warranty)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Brand)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Cpu)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ram)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Storage)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Monitor)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProvidersId.CompanyName)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+    </td>
+</tr>
+}
+
+</table>

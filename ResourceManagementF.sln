@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceManagementF", "ResourceManagementF\ResourceManagementF.csproj", "{8EE24B38-79BB-4EBA-9257-8BA9EEB685A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EE24B38-79BB-4EBA-9257-8BA9EEB685A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE24B38-79BB-4EBA-9257-8BA9EEB685A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE24B38-79BB-4EBA-9257-8BA9EEB685A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE24B38-79BB-4EBA-9257-8BA9EEB685A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {735CFF34-49B5-4C48-8A08-85D7405C7055}
+	EndGlobalSection
+EndGlobal

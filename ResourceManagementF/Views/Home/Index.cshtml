@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Resource Management</h1>
+    <img src="~/Assets/icons8-computer-100.png" />
+    <img src="~/Assets/icons8-printer-100.png" />
+    <br />
+    <br />
+    <p>
+
+        <a>
+            @Html.ActionLink("resource Disponible", "Index", "Computers", null, new { @class = "btn btn-primary btn-lg" })
+        </a>
+        <a>
+            @Html.ActionLink("resources Affecter", "Index", "AcompTs", null, new { @class = "btn btn-success btn-lg" })
+        </a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Enseignant</h2>
+        <p>
+            <a>
+                @Html.ActionLink("Access Account", "Index", "Teachers", null, new { @class = "btn btn-default" })
+            </a>
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>Fournisseur</h2>
+        <p>
+            <a>
+                @Html.ActionLink("Fournisseur", "Index", "Providers", null, new { @class = "btn btn-default" })
+            </a>
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>administratif</h2>
+        <p>
+            <a>
+                @Html.ActionLink("Access Account", "Index", "Administratives", null, new { @class = "btn btn-default" })
+            </a>
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>department</h2>
+        <p>
+            <a>
+                @Html.ActionLink("Access Departements", "Index", "Departments", null, new { @class = "btn btn-default" })
+            </a>
+        </p>
+    </div>
+    <div class="col-md-3">
+        <h2>Service</h2>
+        <p>
+            <a>
+                @Html.ActionLink("Access Service", "Index", "MaintenanceServices", null, new { @class = "btn btn-default" })
+            </a>
+        </p>
+    </div>
+</div>
